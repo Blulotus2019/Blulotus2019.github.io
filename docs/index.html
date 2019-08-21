@@ -20,12 +20,21 @@
         repo: "",
         loadSidebar: true,
         coverpage: true,
-        search: "auto",
+        ga: "UA-128791327-1",
+        search: {
+          noData: {
+            "/": "No results!"
+          },
+          paths: "auto",
+          placeholder: {
+            "/": "Search"
+          }
+        },
         subMaxLevel: "2"
       };
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-    <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
     <script src="//unpkg.com/docsify-copy-code"></script>
     <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   </body>
