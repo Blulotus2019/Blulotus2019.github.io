@@ -1,1 +1,1 @@
-This a note about study, life and work.
+This is my personal notes.
