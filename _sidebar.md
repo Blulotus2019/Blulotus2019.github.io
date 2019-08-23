@@ -1,4 +1,7 @@
-- 集合
+- The Skill of Programming
+  - [编程的智慧](01-skills/programming-skills.md)
+
+<!-- - 集合
 
   - [ArrayList/Vector](collections/ArrayList.md)
   - [LinkedList](collections/LinkedList.md)
@@ -83,5 +86,5 @@
   - [TCP/IP 协议](soft-skills/TCP-IP.md)
   - [一个学渣的阿里之路](soft-skills/Interview-experience.md)
   - [如何成为一位「不那么差」的程序员](soft-skills/how-to-be-developer.md)
-  - [如何高效的使用 Git](soft-skills/how-to-use-git-efficiently.md)
+  - [如何高效的使用 Git](soft-skills/how-to-use-git-efficiently.md) -->
 

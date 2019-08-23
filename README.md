@@ -1,1 +1,1 @@
-This is my personal notes.
+If there is something worth to do, then try your best to do it.
