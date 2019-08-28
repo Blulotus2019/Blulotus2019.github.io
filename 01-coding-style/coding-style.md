@@ -2,7 +2,7 @@
 
 ## 写模块化的代码
 
-- 每个函数只做自己的事情：先自己管好自己。例如，以下函数：
+- 每个函数只做自己的事情：先自己管好自己，方便后续的修改和测试。例如，以下函数：
 
 ```
 void foo() {
@@ -19,7 +19,7 @@ void foo() {
   }
 }
 ```
-这个函数是根据"MacOS"不同来做不同的事情，这里只有c()是共有的，**这两件事之间的共同点少于他们的不同点**，这样就导致函数的逻辑不清晰。应该修改为以下：
+这个函数是根据"MacOS"不同来做不同的事情，这里只有 c() 是共有的，**这两件事之间的共同点少于他们的不同点**，这样就导致函数的逻辑不清晰。应该修改为以下：
 ```
 void fooMacOS() {
   a();
@@ -131,7 +131,7 @@ if (elephant1.alive()) {
 closeDoor(fridge2);
 ...
 ```
-将put elephant1 into fridge2提取出来定义成一个函数：
+将 put elephant1 into fridge2 提取出来定义成一个函数：
 ```
 void put(Elephant elephant, Fridge fridge) {
   openDoor(fridge);
@@ -158,7 +158,7 @@ put(elephant1, fridge2);
      ...
    }
 ```
-这几个boolean都处于同等的地位，将每一个表达式都放在新的一行，这样逻辑就更清晰了。
+这几个 boolean 都处于同等的地位，将每一个表达式都放在新的一行，这样逻辑就更清晰了。
 ```
    if (someLongCondition1() &&
        someLongCondition2() &&
@@ -170,13 +170,13 @@ put(elephant1, fridge2);
 
 ## 写简单的代码
 
-- 避免使用continue和break。在循环语句中使用continue和break会让循环的逻辑和终止的条件变得复杂。  
+- 避免使用 continue 和 break 。在循环语句中使用 continue 和 break 会让循环的逻辑和终止的条件变得复杂。  
 
-  出现continue或者break的原因，往往是对循环的逻辑没有想清楚。如果你考虑周全了，应该是几乎不需要continue或者break的。如果你的循环里出现了continue或者break，你就应该考虑改写这个循环。改写循环的办法有多种：  
-  1.如果出现了continue，你往往只需要把continue的条件反向，就可以消除continue。
-  2.如果出现了break，你往往可以把break的条件，合并到循环头部的终止条件里，从而去掉break。
-  3.有时候你可以把break替换成return，从而去掉break。
-  4.如果以上都失败了，你也许可以把循环里面复杂的部分提取出来，做成函数调用，之后continue或者break就可以去掉了。  
+  出现 continue 或者 break 的原因，往往是对循环的逻辑没有想清楚。如果你考虑周全了，应该是几乎不需要 continue 或者 break 的。如果你的循环里出现了 continue 或者 break，你就应该考虑改写这个循环。改写循环的办法有多种：  
+  1.如果出现了 continue，你往往只需要把 continue 的条件反向，就可以消除 continue。
+  2.如果出现了 break，你往往可以把 break 的条件，合并到循环头部的终止条件里，从而去掉 break。
+  3.有时候你可以把 break 替换成 return，从而去掉 break。
+  4.如果以上都失败了，你也许可以把循环里面复杂的部分提取出来，做成函数调用，之后 continue 或者 break 就可以去掉了。  
 
   实例一：
 
@@ -192,7 +192,7 @@ for (String name: names) {
   ```
 
   以上代码是告诉我们，当含有“bad”的时候是**不做**什么事，修改为**做**什么事，会让逻辑更清晰。
-  可以等价修改为不含continue的代码:
+  可以等价修改为不含 continue 的代码:
 
   ```
 List<String> goodNames = new ArrayList<>();
@@ -205,7 +205,7 @@ for (String name: names) {
   ```
 
   实例二：
-  for和while头部都有一个循环的“终止条件”，那本来应该是这个循环唯一的退出条件。如果你在循环中间有break，它其实给这个循环增加了一个退出条件。你往往只需要把这个条件合并到循环头部，就可以去掉break。
+  for 和 while 头部都有一个循环的“终止条件”，那本来应该是这个循环唯一的退出条件。如果你在循环中间有 break，它其实给这个循环增加了一个退出条件。你往往只需要把这个条件合并到循环头部，就可以去掉 break。
 
   ```
 while (condition1) {
@@ -215,14 +215,14 @@ while (condition1) {
   }
 }
   ```
-  当condition2成立的时候终止循环，这里只要将condition2反转后放到while头部终止条件即可去掉break。
+  当 condition2 成立的时候终止循环，这里只要将 condition2 反转后放到 while 头部终止条件即可去掉 break。
   ```
 while (condition1 && !condition2) {
   ...
 }
   ```
 
-  实例三：很多break退出循环之后，其实接下来就是一个return。这种break往往可以直接换成return。
+  实例三：很多 break 退出循环之后，其实接下来就是一个 return。这种 break 往往可以直接换成 return。
 
   ```
 public boolean hasBadName(List<String> names) {
@@ -248,16 +248,16 @@ public boolean hasBadName(List<String> names) {
     return false;
 }
   ```
-  99%的break和continue，都可以通过替换成return语句，或者翻转if条件的方式来消除掉。
+  99%的 break 和 continue，都可以通过替换成 return语句，或者翻转 if 条件的方式来消除掉。
 
 ## 正确处理异常
 
 - 异常处理原则：谁知情谁处理，谁负责谁处理，谁导致谁处理
 
-## 正确处理null指针
+## 正确处理 null 指针
 
-- 尽量不要产生null指针。尽量不要用null来初始化变量，函数尽量不要返回null。如果你的函数要返回“没有”，“出错了”之类的结果，尽量使用Java的异常机制。
-  比如，如果你有一个函数find，可以帮你找到一个String，也有可能什么也找不到，你可以这样写：
+- 尽量不要产生 null 指针。尽量不要用null来初始化变量，函数尽量不要返回 null。如果你的函数要返回“没有”，“出错了”之类的结果，尽量使用Java的异常机制。
+  比如，如果你有一个函数 find，可以帮你找到一个 String，也有可能什么也找不到，你可以这样写：
   ```
 public String find() throws NotFoundException {
   if (...) {
@@ -267,8 +267,8 @@ public String find() throws NotFoundException {
   }
 }
   ```
-- TODO结合晓风关于null的处理
-- 要明确null返回的意义，不能没有找到的时候返回null，程序出错或异常的时候也返回null。
+- TODO 结合晓风关于 null 的处理
+- 要明确null返回的意义，不能没有找到的时候返回 null，程序出错或异常的时候也返回 null。
 
 ## 防止过度工程
 三原则:  
