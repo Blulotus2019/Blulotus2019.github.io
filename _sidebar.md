@@ -1,5 +1,5 @@
 - The Skill of Programming
-  - [编程的智慧](01-skills/programming-skills.md)
+  - [编程的智慧](01-coding-style/coding-style.md)
 
 <!-- - 集合
 
