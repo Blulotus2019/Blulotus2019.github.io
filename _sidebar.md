@@ -1,6 +1,7 @@
 - The Skill of Programming
   - [编程规范（一）](01-coding-style/coding-style.md)
-  - [编程规范（二）](01-coding-style/coding-style-2.md) 
+  - [编程规范（二）](01-coding-style/coding-style-2.md)
+  - [常用工具配置](01-coding-style/tools-config.md)
 
 <!-- - 集合
 
@@ -46,7 +47,7 @@
 - 常用框架
 
   - [Spring Bean 生命周期](frame/spring-bean-lifecycle.md)
-  - [Spring AOP 的实现原理](frame/SpringAOP.md) 
+  - [Spring AOP 的实现原理](frame/SpringAOP.md)
   - [Guava 源码分析（Cache 原理）](frame/guava-cache.md)
   - [Kafka produce 源码分析](frame/kafka-product.md)
   - [Kafka 消费实践](frame/kafka-consumer.md)
@@ -88,4 +89,3 @@
   - [一个学渣的阿里之路](soft-skills/Interview-experience.md)
   - [如何成为一位「不那么差」的程序员](soft-skills/how-to-be-developer.md)
   - [如何高效的使用 Git](soft-skills/how-to-use-git-efficiently.md) -->
-
