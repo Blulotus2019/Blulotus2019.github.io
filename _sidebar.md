@@ -1,7 +1,9 @@
 - The Skill of Programming
   - [编程规范（一）](01-coding-style/coding-style.md)
   - [编程规范（二）](01-coding-style/coding-style-2.md)
-  - [常用工具配置](01-coding-style/tools-config.md)
+  - [数据库连接池配置](02-configuration/database-connect-pools.md)
+  - [Docker 容器](09-software-guide/docker.md)
+  - [Linux 常用操作](09-software-guide/linux.md)
 
 <!-- - 集合
 
