@@ -53,8 +53,12 @@
 12. 启动一个做了端口映射的 tomcat： `docker run -d -p 8888:8080 tomcat`
 
     1. `-d`：后台运行
-    2. `-p`: 将主机的端口映射到容器的一个端口
+    2. `-p`: Publish a container's port(s) to the host（将主机的端口映射到容器的一个端口）
     3. `8888:8080`：主机端口:容器内部的端口
+    4. `-e`：Set environment variables
+    5. `-P`：Publish all exposed ports to random ports
+    6. `-v`：Bind mount a volume（将 docker 中的配置文件挂在到外部）
+    7. `docker run --help`：以上命令都是通过这个命令查看的。
 
 13. 查看容器日志：`docker logs container-name/container-id`
 
@@ -63,12 +67,16 @@
 1.  [官方文档](https://hub.docker.com/_/mysql)
 
 2.  根据镜像正常启动 mysql 容器  
-    `docker run -p 3306:3306 --name mysql01 -e MYSQL_ROOT_PASSWORD=root -d mysql`
+    `docker run -p 3306:3306 --name mysql01 -e MYSQL_ROOT_PASSWORD=root -e TZ=Asia/Shanghai -d mysql`
 
-3.  常见问题：2059 错误
+3.  常见问题一：navicat 连接时出现 2059 错误
     1.  `docker exec -it 63c9e29aelef bash`63c9e29aelef 为 mysql 容器 id
     2.  `mysql --user=root --password`
     3.  输入密码 root
     4.  `ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'root';`
-    5.  `quit` 退出 mysql
+    5.  `exit` 退出 mysql
     6.  `exit` 退出 bash
+
+## Docker 之 redis 镜像
+
+1.  [官方文档](https://hub.docker.com/_/redis)
