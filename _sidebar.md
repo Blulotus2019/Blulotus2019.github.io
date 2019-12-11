@@ -1,10 +1,10 @@
 - The Skill of Programming
   - [编程规范（一）](01-coding-style/coding-style.md)
   - [编程规范（二）](01-coding-style/coding-style-2.md)
-  - [Druid 常用配置](02-configuration/database-connect-pools.md)
-  - [mybatis 常用配置](02-configuration/mybatis.md)
-  - [Docker 容器](09-software-guide/docker.md)
-  - [Linux 常用操作](09-software-guide/linux.md)
+  - [Druid](02-configuration/database-connect-pools.md)
+  - [mybatis](02-configuration/mybatis.md)
+  - [Docker](09-software-guide/docker.md)
+  - [Linux](09-software-guide/linux.md)
 
 <!-- - 集合
 
