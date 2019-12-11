@@ -36,3 +36,17 @@
     - `-r或-R或–recursive`递归处理，将指定目录下的所有文件及子目录一并处理。
     - `-v或–verbose`显示指令执行过程。
   - 实例：`rm -rf fileDir` 递归删除 fileDir 目录下所有文件
+
+## 其他操作
+
+- 运行文件：`./tomcat.sh`
+- 后台运行服务：`nohup command &`
+  - eg：后台设置内存参数启动 jar 包：`nohup java -Xms128m -Xmx512m -jar proManager.jar >temp.txt &`默认输出到 nohup.out 文件中
+- 查看后台运行的状态：`jobs`;`jobs -l`选项可显示所有任务的 PID
+- `ps -ef | grep command` 或者 `ps aux | grep command` 查看进程
+- 杀掉对应的进程：`kill -9 进程id`
+- 更高级的用法：`ps aux | grep command | grep -v grep | awk '{print $1}' | xargs kill -9`这个表示直接通过 command 获取进程 id 并直接 kill 掉
+- 双击`tab`提示
+- 文件中 `/` 可以进行搜索
+- 给文件添加可执行权限：`chmod 777 tomcat.sh`
+- `man cal` （manaul,cal 查看 cal 计算器相关的指令）

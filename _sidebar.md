@@ -1,14 +1,19 @@
 - The Skill of Programming
+
   - [编程规范（一）](01-coding-style/coding-style.md)
   - [编程规范（二）](01-coding-style/coding-style-2.md)
-  - [Druid](02-configuration/database-connect-pools.md)
-  - [mybatis](02-configuration/mybatis.md)
+  - [开发中常见问题处理](01-coding-style/problem-solve.md)
+  - [IntelliJ IDEA 快捷键](09-software-guide/intelli-idea.md)
+  - [VS Code 快捷键](09-software-guide/vscode.md)
+  - [git](09-software-guide/git.md)
   - [Docker](09-software-guide/docker.md)
   - [Linux](09-software-guide/linux.md)
+  - [redis](09-software-guide/redis.md)
+  - [Druid](02-configuration/database-connect-pools.md)
+  - [mybatis](02-configuration/mybatis.md)
 
 <!-- - 集合
-
-  - [ArrayList/Vector](collections/ArrayList.md)
+    - [ArrayList/Vector](collections/ArrayList.md)
   - [LinkedList](collections/LinkedList.md)
   - [HashMap](collections/HashMap.md)
   - [HashSet](collections/HashSet.md)
@@ -55,21 +60,20 @@
   - [Kafka produce 源码分析](frame/kafka-product.md)
   - [Kafka 消费实践](frame/kafka-consumer.md)
 
-
-- 架构设计
+* 架构设计
 
   - [秒杀系统设计](architecture-design/Spike.md)
   - [秒杀架构实践](architecture-design/seconds-kill.md)
   - [设计一个百万级的消息推送系统](architecture-design/million-sms-push.md)
 
-- 数据库
+* 数据库
 
   - [MySQL 索引原理](db/MySQL-Index.md)
   - [SQL 优化](db/SQL-optimization.md)
   - [数据库水平垂直拆分](db/DB-split.md)
   - [一次分表踩坑实践的探讨](db/sharding-db.md)
 
-- 数据结构与算法
+* 数据结构与算法
 
   - [常见算法](algorithm/common-algorithm.md)
   - [一致性 Hash 算法原理](algorithm/Consistent-Hash.md)
@@ -78,11 +82,10 @@
   - [动手实现一个 LRU cache](algorithm/LRU-cache.md)
   - [亿级数据中判断数据是否不存在](algorithm/guava-bloom-filter.md)
 
-
 - Netty 相关
 
-  - [SpringBoot 整合长连接心跳机制](netty/Netty(1)TCP-Heartbeat.md)
-  - [从线程模型的角度看 Netty 为什么是高性能的？](netty/Netty(2)Thread-model.md)
+  - [SpringBoot 整合长连接心跳机制](<netty/Netty(1)TCP-Heartbeat.md>)
+  - [从线程模型的角度看 Netty 为什么是高性能的？](<netty/Netty(2)Thread-model.md>)
   - [自己实现一个轻量级 HTTP 框架](netty/cicada.md)
   - [为自己搭建一个分布式 IM(即时通讯) 系统](netty/cim.md)
 
