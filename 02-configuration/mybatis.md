@@ -76,6 +76,90 @@ public class MallApplication {
 
 ## MyBatis SQL 语句常用操作
 
+- 通用 CRUD
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ltd.newbee.mall.dao.AdminUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.wcs.mall.entity.AdminUser">
+        <id column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+    </resultMap>
+
+    <sql id="baseColumnList">
+        user_id, user_name, password
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT
+        <include refid="baseColumnList"/>
+        FROM admin_user
+        WHERE user_id = #{userId,jdbcType=INTEGER}
+    </select>
+
+    <insert id="insert" parameterType="com.wcs.mall.entity.AdminUser">
+        INSERT INTO admin_user(
+        <include refid="baseColumnList"/>
+        )
+        VALUES (
+        #{adminUserId,jdbcType=INTEGER},
+        #{loginUserName,jdbcType=VARCHAR},
+        #{loginPassword,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.wcs.mall.entity.AdminUser">
+        INSERT INTO admin_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="adminUserId != null">
+                user_id,
+            </if>
+            <if test="loginUserName != null">
+                user_name,
+            </if>
+            <if test="loginPassword != null">
+                password,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.wcs.mall.entity.AdminUser">
+        UPDATE admin_user
+        <set>
+            <if test="userName != null">
+                user_name = #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+        </set>
+        WHERE
+        admin_user_id = #{adminUserId,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.wcs.mall.entity.AdminUser">
+        UPDATE admin_user
+        SET user_name = #{userName,jdbcType=VARCHAR},
+            password  = #{password,jdbcType=VARCHAR},
+            WHERE user_id = #{userId,jdbcType=INTEGER}
+    </update>
+</mapper>
+```
+
 - [Dynamic SQL](https://mybatis.org/mybatis-3/dynamic-sql.html)
 - `if` 标签
 
