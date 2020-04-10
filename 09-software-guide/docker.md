@@ -17,7 +17,7 @@
     `docker -v`
 
 6.  开机启动 docker  
-     `systemctl enable docker Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service`
+     `systemctl enable docker.service`
 
 7.  停止 docker  
     `systemctl stop docker`
