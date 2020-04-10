@@ -62,12 +62,14 @@
 
 13. 查看容器日志：`docker logs container-name/container-id`
 
+14. 容器在 docker 重启后自动重启：`docker run -dit --restart unless-stopped redis`
+
 ## Docker 之 mysql 镜像
 
 1.  [官方文档](https://hub.docker.com/_/mysql)
 
-2.  根据镜像正常启动 mysql 容器  
-    `docker run -p 3306:3306 --name mysql01 -e MYSQL_ROOT_PASSWORD=root -e TZ=Asia/Shanghai -d mysql`
+2.  根据镜像正常启动 mysql 容器：设置端口映射，设置密码，设置时区，设置容器自动重启  
+    `docker run -p 3306:3306 --name mysql01 -e MYSQL_ROOT_PASSWORD=root -e TZ=Asia/Shanghai -d -dit --restart unless-stopped mysql`
 
 3.  常见问题一：navicat 连接时出现 2059 错误
     1.  `docker exec -it 63c9e29aelef bash`63c9e29aelef 为 mysql 容器 id
