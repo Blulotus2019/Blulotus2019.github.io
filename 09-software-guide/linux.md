@@ -43,7 +43,7 @@
 - 后台运行服务：`nohup command &`
   - eg：后台设置内存参数启动 jar 包：`nohup java -Xms128m -Xmx512m -jar proManager.jar >temp.txt &`默认输出到 nohup.out 文件中
 - 查看后台运行的状态：`jobs`;`jobs -l`选项可显示所有任务的 PID
-- `ps -ef | grep command` 或者 `ps aux | grep command` 查看进程
+- `ps -ef | grep command` 或者 `ps aux | grep command`或者`netstat -tanlp` 查看进程
 - 杀掉对应的进程：`kill -9 进程id`
 - 更高级的用法：`ps aux | grep command | grep -v grep | awk '{print $1}' | xargs kill -9`这个表示直接通过 command 获取进程 id 并直接 kill 掉
 - 双击`tab`提示
