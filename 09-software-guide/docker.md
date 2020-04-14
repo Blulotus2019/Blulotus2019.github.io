@@ -64,6 +64,10 @@
 
 14. 容器在 docker 重启后自动重启：`docker run -dit --restart unless-stopped redis`
 
+15. 在运行容器中执行命令：`docker exec [OPTIONS] CONTAINER COMMAND [ARG...]`。
+    - eg1：`docker exec -it redis-test /bin/bash`通过 exec 命令对 redis-test 容器执行 bash，再执行`redis-cli`即进入 redis 客户端
+    - eg2：`docker exec -it mysql01 /bin/bash`通过 exec 命令对 mysql01 容器执行 bash，再执行`mysql -h localhost -u root -p`再输入密码即可
+
 ## Docker 之 mysql 镜像
 
 1.  [官方文档](https://hub.docker.com/_/mysql)
