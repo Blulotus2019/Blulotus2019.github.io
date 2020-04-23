@@ -76,6 +76,8 @@ public class MallApplication {
 
 ## MyBatis SQL 语句常用操作
 
+- 批量更新  
+  `url: jdbc:mysql://localhost:3306/gene_collection?characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true`
 - 通用 CRUD
 
 ```
