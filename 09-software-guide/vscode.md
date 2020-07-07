@@ -6,6 +6,7 @@
 - `Alt+1`：打开侧边栏
 - `Ctrl+Alt+F`：格式化
 - `Ctrl+Shift+Y`：删除当前行
+- `alt+shift+a`：注释
 
 ## 代码片段
 
