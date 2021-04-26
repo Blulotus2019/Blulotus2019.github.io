@@ -11,6 +11,7 @@
   - [redis](09-software-guide/redis.md)
   - [Druid](02-configuration/database-connect-pools.md)
   - [mybatis](02-configuration/mybatis.md)
+  - [sqlserver](09-software-guide/sqlserver.md)
   - [windows常用操作](09-software-guide/windows-operate.md)
 
 <!-- - 集合
