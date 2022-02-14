@@ -8,6 +8,7 @@
 - `git commit -m "comment"` ：版本提交(将暂存区的改动提交到版本控制中)
 - `git reset --hard HEAD^` ：回退到上一个版本，HEAD 表示当前版本
 - `git checkout -- xx.txt` ：撤销 xx.txt 文件的修改
+- `git pull -p`：同步远程新增信息
 
 ## 添加远程仓库
 
