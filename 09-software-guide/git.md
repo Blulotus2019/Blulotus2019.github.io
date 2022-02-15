@@ -17,6 +17,7 @@
 - `git push -u origin master` ：把本地仓库推送到远程仓库
   - 我们第一次推送 master 分支时，加上了-u 参数，Git 不但会把本地的 master 分支内容推送的远程新的 master 分支，还会把本地的 master 分支和远程的 master 分支关联起来，在以后的推送或者拉取时就可以简化命令。
   - git 拒绝解决办法一：`git pull origin master --allow-unrelated-histories`
+- `git push -u origin dev` ：把代码推送到远程dev分支
 
 ## 从远程仓库克隆
 
@@ -31,6 +32,28 @@
 - 此时 push 到 github 会提示冲突
 - Git->Repository->Reset HEAD 中输入 newVersion,`Reset Type:*Mixed`.
 - `commit` 之后再 `push`,就不再有冲突了。
+
+### 分支branch相关命令
+
+---
+
+- 查看本地分支：$ **git** branch
+
+- 查看远程分支：$ **git** branch -r
+
+- 创建本地分支：$ **git** branch [name] ----注意新分支创建后不会自动切换为当前分支
+
+- 切换分支：$ **git** checkout [name]
+
+- 创建新分支并立即切换到新分支：$ **git** checkout -b [name]
+
+- 删除分支：$ **git** branch -d [name] ---- -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项
+
+- 合并分支：$ **git** merge [name] ----将名称为[name]的分支与当前分支合并
+
+- 创建远程分支(本地分支**push**到远程)：$ **git push** origin [name]
+
+- 删除远程分支：$ **git push** origin :heads/[name]
 
 ## Permission denied (publickey)
 
