@@ -1,5 +1,3 @@
-## git
-
 ## Git开发流程
 
 ### 流程
@@ -61,8 +59,6 @@ git push origin next:next	# ”:“前面的是本地分支的名字，”:"后�
 > 注意：合并之前先 `commit`，合并之前先 `git pull`
 
 ## 常用命令
-
-### 常用命令
 
 ```python
 git clone git@github.com:Bjorne1/springBootDemo.git # 从远程仓库克隆
