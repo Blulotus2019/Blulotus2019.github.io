@@ -13,6 +13,7 @@
   - [mybatis](02-configuration/mybatis.md)
   - [sqlserver](09-software-guide/sqlserver.md)
   - [windows常用操作](09-software-guide/windows-operate.md)
+  - [其他](09-software-guide/other.md)
 
 <!-- - 集合
     - [ArrayList/Vector](collections/ArrayList.md)
